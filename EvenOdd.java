@@ -1,3 +1,4 @@
+/* program for even and odd */
 class EvenOdd{
 void checkevenodd(int n) {
 		int sum1 = 0, sum2 = 0;
