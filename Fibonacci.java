@@ -1,16 +1,25 @@
-class Fibonacci{
-	public static void main(String[] args){
-		int a = 0,b = 1,c ;
-		System.out.print(a +" " +b);
-		for(int i = 2;i<10;i++){
-			c= a+b;
-			System.out.print(" "+c);
-			a = b;
+import java.util.Scanner;
+
+public class Fibonacci {
+	public static void main(String[] args) {
+		
+		try (Scanner input = new Scanner(System.in)) {
+			int n = input.nextInt();
 			
-			b = c;
+			int a = 0;
+			int b = 1;
 			
+			int count = 2;
+			
+			while(count <= n) {
+				int temp = b;
+				b += a;
+				a = temp;
+				count++;
+			}
+			
+			System.out.println(b);
 		}
+		
 	}
-		
-		
 }
